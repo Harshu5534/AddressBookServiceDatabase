@@ -32,3 +32,7 @@ select * from AddressBookTable;
 -------------------UC4----------------------
 
 Update AddressBookTable Set City='Latur',State='Gujrat' where FirstName='Harshali';
+
+-------------------UC5----------------------
+
+Delete from AddressBookTable where FirstName='Nilesh';
