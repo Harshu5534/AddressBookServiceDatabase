@@ -28,3 +28,7 @@ Insert into AddressBookTable Values ('Harshal','Patil','Warud','Dhule','Maharast
 ('Nilesh','Deshmukh','Indore','Indore','MadhyaPradesh',679900,'8000446635','NileshD@gmail.com');
 
 select * from AddressBookTable;
+
+-------------------UC4----------------------
+
+Update AddressBookTable Set City='Latur',State='Gujrat' where FirstName='Harshali';
