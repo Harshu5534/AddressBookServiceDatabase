@@ -43,6 +43,8 @@ Select * from AddressBookTable where City='Dhule' Order By FirstName;
 
 Select * from AddressBookTable where State='Maharastra' Order By FirstName;
 
+Select * from AddressBookTable where State='Gujrat' Order By FirstName;
+
 
 
 
