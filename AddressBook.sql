@@ -45,6 +45,11 @@ Select * from AddressBookTable where State='Maharastra' Order By FirstName;
 
 Select * from AddressBookTable where State='Gujrat' Order By FirstName;
 
+-------------------UC7----------------------
+
+select count(*) from AddressBookTable where city='Dhule';
+
+select count(*) from AddressBookTable where State='Maharastra';
 
 
 
