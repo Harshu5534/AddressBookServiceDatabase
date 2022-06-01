@@ -51,5 +51,11 @@ select count(*) from AddressBookTable where city='Dhule';
 
 select count(*) from AddressBookTable where State='Maharastra';
 
+-------------------UC8----------------------
+
+select FirstName,LastName ,City from AddressBookTable Order By City ASC;
+
+select FirstName,LastName ,City from AddressBookTable Order By City DESC;
+
 
 
