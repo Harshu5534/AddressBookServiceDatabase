@@ -36,3 +36,13 @@ Update AddressBookTable Set City='Latur',State='Gujrat' where FirstName='Harshal
 -------------------UC5----------------------
 
 Delete from AddressBookTable where FirstName='Nilesh';
+
+-------------------UC6----------------------
+
+Select * from AddressBookTable where City='Dhule' Order By FirstName;
+
+Select * from AddressBookTable where State='Maharastra' Order By FirstName;
+
+
+
+
