@@ -73,4 +73,38 @@ select count (*) from AddressBookService where Type='Friend';
 
 select PhoneNumber  from AddressBookService where Type='Friend';
 
+------------------------UC11-----------------------------
+
+Alter Table AddressBookService Drop Column TypeId;
+
+Create Table AddressBookTable(
+TypeId int Primary Key Identity (1,1),
+Type varchar(200),
+);
+
+Insert into AddressBookTable Values('Family'),
+('Friends'),
+('Profession'),
+('Others');  
+
+create Table AddressBookMapping (
+MappingId int Primary Key Identity (1,1),
+TypeId int,
+Id int 
+);
+
+alter table AddressBookMapping Add Foreign Key(Id) 
+References AddressBookService(Id);
+
+alter table AddressBookMapping Add Foreign Key(TypeId) 
+References AddressBookType(TypeId);
+
+insert into AddressBookMapping(Id,TypeId)values
+(1,1),
+(1,2);
+
+select * from AddressBookService inner join 
+AddressBookMapping on AddressBookService.Id=AddressBookMapping.Id
+inner Join AddressBook on AddressBook.TypeId=AddressBookMapping.TypeId;
+
 
