@@ -6,7 +6,7 @@ Use AddressBookDatabase;
 
 -------------------UC2----------------------
 
-Create Table AddressBookTable(
+Create Table AddressBookService(
 Id int Primary Key Identity (1,1),
 FirstName VarChar (150),
 LastName varchar(100),
@@ -21,41 +21,49 @@ Email varchar(100)
 -------------------UC3----------------------
 
 
-Insert into AddressBookTable Values ('Harshal','Patil','Warud','Dhule','Maharastra',425404,'9158719379','Harshu123@gmail.com'),
+Insert into AddressBookService Values ('Harshal','Patil','Warud','Dhule','Maharastra',425404,'9158719379','Harshu123@gmail.com'),
 ('Girish','Patil','Warud','Shirpur','Maharastra',425404,'9185717557','Girish123@gmail.com'),
 ('Rohit','Pawar','Amlner','Dhule','Maharastra',425735,'8275591324','Rohit20@gmail.com'),
 ('Harshali','Nashik','Nashik','','Maharastra',564738,'9158564832','Harshali01@gmail.com'),
 ('Nilesh','Deshmukh','Indore','Indore','MadhyaPradesh',679900,'8000446635','NileshD@gmail.com');
 
-select * from AddressBookTable;
+select * from AddressBookService;
 
 -------------------UC4----------------------
 
-Update AddressBookTable Set City='Latur',State='Gujrat' where FirstName='Harshali';
+Update AddressBookService Set City='Latur',State='Gujrat' where FirstName='Harshali';
 
 -------------------UC5----------------------
 
-Delete from AddressBookTable where FirstName='Nilesh';
+Delete from AddressBookService where FirstName='Nilesh';
 
 -------------------UC6----------------------
 
-Select * from AddressBookTable where City='Dhule' Order By FirstName;
+Select * from AddressBookService where City='Dhule' Order By FirstName;
 
-Select * from AddressBookTable where State='Maharastra' Order By FirstName;
+Select * from AddressBookService where State='Maharastra' Order By FirstName;
 
-Select * from AddressBookTable where State='Gujrat' Order By FirstName;
+Select * from AddressBookService where State='Gujrat' Order By FirstName;
 
 -------------------UC7----------------------
 
-select count(*) from AddressBookTable where city='Dhule';
+select count(*) from AddressBookService where city='Dhule';
 
-select count(*) from AddressBookTable where State='Maharastra';
+select count(*) from AddressBookService where State='Maharastra';
 
 -------------------UC8----------------------
 
-select FirstName,LastName ,City from AddressBookTable Order By City ASC;
+select FirstName,LastName ,City from AddressBookService Order By City ASC;
 
-select FirstName,LastName ,City from AddressBookTable Order By City DESC;
+select FirstName,LastName ,City from AddressBookService Order By City DESC;
 
+-------------------UC9----------------------
 
+Alter  Table AddressBookService
+Add TypeId int;
+
+Select * from AddressBookService
+
+update AddressBookService
+set FullName='Girish Patil', Type='Friend' where FirstName='Girish';
 
