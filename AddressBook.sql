@@ -60,10 +60,17 @@ select FirstName,LastName ,City from AddressBookService Order By City DESC;
 -------------------UC9----------------------
 
 Alter  Table AddressBookService
-Add FullName varchar(100),TypeId int;
+Add FullName varchar(100),Type Varchar(100);
 
 Select * from AddressBookService
 
 update AddressBookService
 set FullName='Girish Patil', Type='Friend' where FirstName='Girish';
+
+-------------------UC10----------------------
+
+select count (*) from AddressBookService where Type='Friend';
+
+select PhoneNumber  from AddressBookService where Type='Friend';
+
 
