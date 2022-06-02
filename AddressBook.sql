@@ -60,7 +60,7 @@ select FirstName,LastName ,City from AddressBookService Order By City DESC;
 -------------------UC9----------------------
 
 Alter  Table AddressBookService
-Add TypeId int;
+Add FullName varchar(100),TypeId int;
 
 Select * from AddressBookService
 
