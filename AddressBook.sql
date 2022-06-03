@@ -105,6 +105,6 @@ insert into AddressBookMapping(Id,TypeId)values
 
 select * from AddressBookService inner join 
 AddressBookMapping on AddressBookService.Id=AddressBookMapping.Id
-inner Join AddressBook on AddressBook.TypeId=AddressBookMapping.TypeId;
+inner Join AddressBookTable on AddressBookTable.TypeId=AddressBookMapping.TypeId;
 
 
